@@ -1,0 +1,1 @@
+find . -maxdepth 1 \( -type f -o -type d \) -not -name "." 2>/dev/null | wc -l | tr -d ' '
