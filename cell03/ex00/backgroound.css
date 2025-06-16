@@ -1,0 +1,23 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s;
+  font-family: Arial, sans-serif;
+}
+button {
+  padding: 16px 32px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 10px;
+  background: #e17055;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #e1705530;
+  transition: background 0.2s;
+}
+button:hover {
+  background: #fdcb6e;
+  color: #333;
+}
