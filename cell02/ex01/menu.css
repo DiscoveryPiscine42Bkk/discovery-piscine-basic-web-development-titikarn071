@@ -1,0 +1,97 @@
+body {
+  background: #f8e1e7;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropbtn {
+  background: linear-gradient(90deg, #e17055 60%, #fdcb6e 100%);
+  color: #fff;
+  padding: 18px 40px;
+  font-size: 1.3em;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: background 0.2s;
+}
+.dropbtn:hover, .dropdown:focus-within .dropbtn {
+  background: linear-gradient(90deg, #fdcb6e 60%, #e17055 100%);
+  color: #6d4c41;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #fff8e1;
+  min-width: 220px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  border-radius: 18px;
+  z-index: 1;
+  margin-top: 8px;
+  padding: 10px 0;
+  border: 2px solid #fdcb6e;
+}
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  display: block;
+}
+.dropdown-content a {
+  color: #6d4c41;
+  padding: 12px 28px;
+  text-decoration: none;
+  display: block;
+  font-size: 1.1em;
+  border-radius: 12px;
+  transition: background 0.18s, color 0.18s;
+  font-weight: 500;
+}
+.dropdown-content a:hover {
+  background: #ffe082;
+  color: #d84315;
+}
+/* Sandwich visual */
+.sandwich-top {
+  height: 22px;
+  background: linear-gradient(90deg, #fdcb6e 70%, #e17055 100%);
+  border-radius: 18px 18px 8px 8px;
+  margin-bottom: 2px;
+  box-shadow: 0 2px 6px #e1705550 inset;
+}
+.sandwich-bottom {
+  height: 18px;
+  background: linear-gradient(90deg, #fdcb6e 70%, #e17055 100%);
+  border-radius: 8px 8px 18px 18px;
+  margin-top: 2px;
+  box-shadow: 0 -2px 6px #e1705550 inset;
+}
+.sandwich-ingredient {
+  height: 16px;
+  margin: 0 18px;
+  border-radius: 8px;
+}
+.ham { background: linear-gradient(90deg, #e17055 60%, #fdcb6e 100%); }
+.cheese { background: #ffe082; }
+.lettuce { background: #81c784; }
+.tomato { background: #e57373; }
+.forbidden {
+  background: repeating-linear-gradient(
+    45deg,
+    #bdbdbd,
+    #bdbdbd 6px,
+    #fff 6px,
+    #fff 12px
+  );
+  color: #b71c1c;
+  text-align: center;
+  font-size: 0.95em;
+  line-height: 16px;
+  font-style: italic;
+}
