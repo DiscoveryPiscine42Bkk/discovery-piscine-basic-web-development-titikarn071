@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Background Color</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    button {
+      padding: 16px 32px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 10px;
+      background: #e17055;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button id="change-bg">Change Background Color</button>
+  <script>
+    $('#change-bg').click(function() {
+      const randomColor = "#" + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0');
+      $('body').css('background', randomColor);
+    });
+  </script>
+</body>
+</html>
