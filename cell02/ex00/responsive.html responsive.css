@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Table</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    table {
+      width: 100vw;
+      height: 100vh;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+    td {
+      border: 2px solid #fff;
+      text-align: center;
+      font-size: 2vw;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      word-break: break-word;
+      padding: 0;
+    }
+    .cell1 { background-color: #e17055; }
+    .cell2 { background-color: #00b894; }
+    .cell3 { background-color: #0984e3; }
+    .cell4 { background-color: #fdcb6e; color: #333; }
+    .cell5 { background-color: #6c5ce7; }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <td class="cell1">Cell 1</td>
+      <td class="cell2">Cell 2</td>
+      <td class="cell3">Cell 3</td>
+      <td class="cell4">Cell 4</td>
+      <td class="cell5">Cell 5</td>
+    </tr>
+  </table>
+</body>
+</html>
