@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Department - ทีมงาน</title>
+        <!-- java scrips ที่ใช้ในการติดตั้งเครื่องมือ , 2 บรรทัดนี้คือการนำเข้าเครื่องมือ -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .card-hover {
+            transition: all 0.3s ease; 
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- ส่วนของแถบรายการเมนู -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!--ปรับขนาด-->>
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-xl font-bold text-gray-900">CS Department</h1>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">หน้าหลัก</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">ประวัติ</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">con</a>
+
+
+
+                </div>
+                    <!-- ปุ่มที่จะกดพาเราไป -->
+                    <div class="md:hidden">
+                    <button class="mobile-menu-button text-gray-700 hover:text-blue-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- เมนู -->
+        <div class="mobile-menu hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#" class="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium">หน้าหลัก</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">ประวัติ</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">con</a>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Header Section -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">ทีมงาน</h1>
+            <p class="text-xl text-gray-600">พบกับสมาชิกในทีมของเรา</p>
+        </div>
+
+        <!-- Team Members Section -->
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <!-- คนที่1 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                <div class="p-6">
+                    <div class="flex justify-center mb-6">
+                        <img src="/placeholder.svg?height=200&width=200" alt="Member 1" class="w-48 h-48 rounded-lg object-cover">
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">สมาชิกคนที่ 1</h3>
+                        <p class="text-gray-600 mb-6">นักศึกษาสาขาวิทยาการคอมพิวเตอร์</p>
+                        <a href="per1.html" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300 font-medium">
+                            ดูประวัติ
+                            </a>
+
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- คนที่2 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                <div class="p-6">
+                    <div class="flex justify-center mb-6">
+                        <img src="/placeholder.svg?height=200&width=200" alt="Member 2" class="w-48 h-48 rounded-lg object-cover">
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">สมาชิกคนที่ 2</h3>
+                        <p class="text-gray-600 mb-6">นักศึกษาสาขาวิทยาการคอมพิวเตอร์</p>
+                        <a href="per2.html" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300 font-medium">
+                            ดูประวัติ
+                            </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+<script>
+        $(document).ready(function() {
+            // คำสั่งรันไปเรื่อยๆ
+            $('.mobile-menu-button').click(function() {
+                $('.mobile-menu').toggleClass('hidden');
+            });
+
+            // 
+            $('button:contains("ดูประวัติ")').click(function() {
+                var memberName = $(this).closest('.bg-white').find('h3').text();
+                alert('คลิกดูประวัติของ ' + memberName);
+                // You can replace this with actual navigation or modal functionality
+            });
+        });
+    </script>
+</body>
+</html>
