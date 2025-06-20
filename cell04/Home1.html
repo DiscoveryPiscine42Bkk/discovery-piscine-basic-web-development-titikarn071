@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>........</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="เว็บเพจแบบเรียบง่ายพร้อมเมนูลัดและสไลด์เนื้อหา">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+body {
+  margin: 0;
+  font-family: 'Kanit', sans-serif;
+  background: url('2.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+}
+
+    nav.navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #0097a7;
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      padding: 14px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 16px;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .navbar a:hover {
+      background: #4ddce1;
+      color: #004d4d;
+    }
+
+    .slide {
+      max-width: 900px;
+      margin: 60px auto;
+      background: #ffffff;
+      padding: 48px 24px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      scroll-margin-top: 80px;
+    }
+
+    .slide1 { background: #e0f7fa; }
+    .slide2 { background: #f1f8e9; }
+    .slide3 { background: #fce4ec; }
+
+    .content-box {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .image-container img {
+      border-radius: 50%;
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .text-container {
+      flex: 1 1 250px;
+    }
+
+    .faculty-image {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .faculty-image img {
+      max-width: 100%;
+      width: 500px;
+      height: auto;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+      color: #00838f;
+      margin-bottom: 16px;
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 700px) {
+      .navbar {
+        gap: 10px;
+        flex-wrap: wrap;
+        padding: 12px;
+      }
+
+      .slide {
+        padding: 32px 16px;
+        margin: 40px 12px;  
+      }
+
+      .content-box {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .text-container {
+        text-align: center;
+      }
+
+      .faculty-image img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="#slide1">Profile</a>
+    <a href="#slide2">HISTORY</a>
+    <a href="#slide3">Contact</a>
+  </nav>
+
+  <section class="slide slide1" id="slide1">
+    <div class="content-box">
+      <div class="image-container">
+        <img src="./pho/vava.jpg" alt="โปรไฟล์">
+      </div>
+      <div class="text-container">
+        <h1>Profile</h1>
+        <p>ชื่อ:ฐิติกาญจน์ รัตนะเอี่ยม</p>
+        <p>คณะ: ครุศาสตร์อุตสาหกรรมและเทคโนโลยี สาขาเทคโนโลยีคอมพิวเตอร์</p>
+      </div>
+    </div>
+    <div class="faculty-image">
+      <img src="./pho/siet.png" alt="คณะ"style="width: 100px;height:auto;">
+    </div>
+  </section>
+
+  <section class="slide slide2" id="slide2">
+    <h2>HISTORY</h2>
+    <p>ประวัติความเป็นมาของคณะครุศาสตร์อุตสาหกรรม
+ 
+คณะครุศาสตร์อุตสาหกรรม สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง จัดตั้งขึ้นเมื่อวันที่ 10 พฤศจิกายน พ.ศ.2520 ด้วยความคิดริเริ่มของ ศาสตราจารย์ ดร.วิทยา เพียรวิจิตร รองอธิการบดีสถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง ศาสตราจารย์ประสม รังสิโรจน์ คณบดีคณะสถาปัตยกรรมศาสตร์ และรองศาสตราจารย์ ดร.โกศล เพ็ชร์สุวรรรณ์ คณบดีคณะวิศวกรรมศาสตร์ (ตำแหน่งในขณะนั้น) ที่จะให้สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหาร เป็นศูนย์กลางการศึกษาที่สมบูรณ์ตามวัตถุประสงค์ของสถาบันที่ว่า สถาบันเทคโนโลยีพระจอมเกล้าเป็นสถาบันการศึกษาและวิจัยมีวัตถุประสงค์ที่จะผลิตครูอาชีวศึกษาระดับปริญญาตรีให้การศึกษาและวิจัยทางเทคโนโลยีและวิทยาศาสตร์
+</p>
+  </section>
+
+  <section class="slide slide3" id="slide3">
+    <h2>Contact</h2>
+    <p>หากมีคำถามหรือข้อเสนอแนะ ติดต่อได้ที่ Facebook: <a href="https://www.facebook.com/" target="_blank"><strong> Wawa Titikarn</strong></a></p>
+    <p>หากมีคำถามหรือข้อเสนอแนะ ติดต่อได้ที่ Instagram: <a href="https://www.instagram.com https://www.instagram.com/wavalency?igsh=MXVwNHJnZ2V0cHF2Zw%3D%3D&utm_source=qr" target="_blank"><strong>wavalency.</strong></a></p>
+    <p>หากมีคำถามหรือข้อเสนอแนะ ติดต่อได้ที่อีเมล <a href="mailto:vaumgasem@gmail.com"><strong>68030071@kmitl.ac.th</strong></a></p>
+  </section>
+</body>
+</html>
