@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>Rush Project</title>
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; 
+      background: #d08ac0;
+      font-family: 'Roboto', Arial, sans-serif;
+      position: relative;
+      z-index: 1;
+    }
+    h1 {
+      color: #000000;
+      margin-bottom: 40px;
+    }
+    .links {
+      display: flex;
+      gap: 40px;
+    }
+    .entry-link {
+      display: inline-block;
+      padding: 24px 48px;
+      background: #fff;
+      color: #00f7ff ;
+      border-radius: 18px;
+      font-size: 1.4rem;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 4px 16px #06d9e040;
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+    }
+    .entry-link:hover {
+      background: #d08ac0;
+      color: #fff;
+      transform: translateY(-4px) scale(1.05);
+    }
+    .wave-container {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 150px;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .waves {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .wave1, .wave2, .wave3 {
+      animation: waveMove 8s linear infinite;
+    }
+    .wave2 {
+      animation-duration: 10s;
+      animation-delay: 2s;
+    }
+    .wave3 {
+      animation-duration: 12s;
+      animation-delay: 4s;
+    }
+    @keyframes waveMove {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-80px); }
+    }
+    body {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Wawa and Punpun</h1>
+  <div class="links">
+    <a href="Home1.html" class="entry-link">วาวา</a>
+    <a href="Home2.html" class="entry-link">ปันปัน</a>
+  </div>
+  <!-- คลื่นไหว -->
+  <div class="wave-container">
+    <svg class="waves" viewBox="0 0 1440 150" preserveAspectRatio="none">
+      <path class="wave1" d="M0,80 C360,160 1080,0 1440,80 L1440,150 L0,150 Z" fill="#fff" opacity="0.7"/>
+      <path class="wave2" d="M0,100 C400,200 1040,0 1440,100 L1440,150 L0,150 Z" fill="#fff" opacity="0.5"/>
+      <path class="wave3" d="M0,120 C420,180 1020,40 1440,120 L1440,150 L0,150 Z" fill="#fff" opacity="0.3"/>
+    </svg>
+  </div>
+</body>
+</html>
